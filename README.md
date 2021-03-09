@@ -1,2 +1,2 @@
 # test-pattern-examples
-A simplified client/server application that demonstrates patterns in testing
+A set of simplified client/server applications that demonstrate patterns in testing
