@@ -106,20 +106,9 @@
             }
         
         XCTAssertTrue(elems[i].isHittable, @"is the button hittable %@", elems[i].label);
-        /*
-        XCTAssertTrue(CGRectContainsRect(screenRect, elems[i].frame), @"[%f %f %f %f] vs. [%f %f %f %f]",
-                      screenRect.origin.x,
-                      screenRect.origin.y,
-                      screenRect.size.width,
-                      screenRect.size.height,
-                      elems[i].frame.origin.x,
-                      elems[i].frame.origin.y,
-                      elems[i].frame.size.width,
-                      elems[i].frame.size.height
-                      );
-         */
-            screenRect = [UIScreen mainScreen].nativeBounds;
-        XCTAssertTrue(CGRectContainsRect(screenRect, elems[i].frame), @"[%f %f %f %f], [%f %f %f %f]",
+        screenRect = [UIScreen mainScreen].nativeBounds;
+        XCTAssertTrue(CGRectContainsRect(screenRect, elems[i].frame), @"%@ was not in frame [%f %f %f %f], [%f %f %f %f]",
+                      elems[i].label,
                       elems[i].frame.origin.x,
                       elems[i].frame.origin.y,
                       elems[i].frame.size.width,
